@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50b" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DrawingData" representedClassName="DrawingData" syncable="YES">
+        <attribute name="game" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="owner" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="word" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="GameData" representedClassName="GameData" syncable="YES">
+        <attribute name="currentOwner" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="drawings" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="gameId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="players" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="round" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="PlayerData" representedClassName="PlayerData" syncable="YES">
+        <attribute name="currentGames" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="WordData" representedClassName="WordData" syncable="YES">
+        <attribute name="wordStr" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="wordType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="GameData" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="PlayerData" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="DrawingData" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="WordData" positionX="160" positionY="192" width="128" height="75"/>
+    </elements>
+</model>

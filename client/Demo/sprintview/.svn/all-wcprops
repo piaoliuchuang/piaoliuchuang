@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/51/trunk/iphone.sprintview
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/50/trunk/iphone.sprintview/main.m
+END
+iphone_sprintview-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/50/trunk/iphone.sprintview/iphone_sprintview-Info.plist
+END
+iphone_sprintview_Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/50/trunk/iphone.sprintview/iphone_sprintview_Prefix.pch
+END
+SecondView.xib
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/50/trunk/iphone.sprintview/SecondView.xib
+END
+close.png
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/50/trunk/iphone.sprintview/close.png
+END
+iphone_sprintviewViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/50/trunk/iphone.sprintview/iphone_sprintviewViewController.xib
+END
+MainWindow.xib
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/50/trunk/iphone.sprintview/MainWindow.xib
+END

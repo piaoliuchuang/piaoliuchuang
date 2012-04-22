@@ -1,0 +1,21 @@
+
+>  Readme.mdown   
+>  Drawus   
+>  Created by Tianhang Yu on 12-3-21.   
+>  Copyright (c) 2012年 99fang. All rights reserved.   
+
+#命名规则：
+
+* controls：动词 或 动词短语 + viewController
+* views: 同controls
+* models： 名词 或 名词词组 + model
+* cellIdentifier：名词 + cellIdentifier
+* apple ID : eg. draw_iphone
+* provisioning : eg. draw_iphone_dev
+* distribution : eg. draw_iphone_rc
+
+#可选后缀：
+
+* helper	 
+* manager  
+* fetcher
