@@ -12,13 +12,13 @@
 #import "WordModel.h"
 #import "PlayerModel.h"
 
-typedef enum
-{
-    errorTypeUnknown = 0,
-    errorTypeFailed,
-    errorTypeNetwork,
-    errorTypeNoUser
-} errorType;
+//typedef enum
+//{
+//    errorTypeUnknown = 0,
+//    errorTypeFailed,
+//    errorTypeNetwork,
+//    errorTypeNoUser
+//} gameErrorType;
 
 @interface GameDataFetcher : DataFetcher
 

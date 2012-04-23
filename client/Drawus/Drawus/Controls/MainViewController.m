@@ -165,7 +165,7 @@ enum {
     _nav.leftView  = setupBtn;
     _nav.rightView = guideBtn;
     
-    [_nav setDrTitle:@"画点啥" type:TITLE_VIEW_TYPE_NORMAL];
+    [_nav setDrTitle:@"画点啥" type:titleViewTypeNormal];
     [_nav.kmNavigationBar showShadow:YES];
 }
 
@@ -173,7 +173,7 @@ enum {
 {
     [super viewDidAppear:animated];
 
-    [_navController showPopViewByType:popViewTypeConnect];
+    [_nav showPopViewByType:popViewTypeConnect];
     [[GameDataFetcher sharedFetcher] fetchData];
 //    [[PlayerDataFetcher sharedFetcher] fetchData];
     
@@ -213,8 +213,8 @@ enum {
     if (dataFetcher == [GameDataFetcher sharedFetcher])
     {
         self.currentGames = [[GameDataFetcher sharedFetcher] currentGames];  
-        -
-        [_navController hidePopViewByType:popViewTypeConnect]; 
+        
+        [_nav hidePopViewByType:popViewTypeConnect]; 
     }
     else if (dataFetcher == [PlayerDataFetcher sharedFetcher])
     {
@@ -463,11 +463,11 @@ enum {
             {
                 if (!username())
                 {
-                    [_nav showPopViewByType:POP_VIEW_TYPE_CREATE_USER];
+                    [_nav showPopViewByType:popViewTypeCreateUser];
                 }
                 else if (_selectedPlayer == -1) 
                 {
-                    [_nav showPopViewByType:POP_VIEW_TYPE_CREATE_GAME];
+                    [_nav showPopViewByType:popViewTypeCreateGame];
                 }
                 else
                 {

@@ -70,22 +70,22 @@
     }
 }
 
-- (void)setDrTitle:(NSString *)drTitle type:(TITLE_VIEW_TYPE)type
+- (void)setDrTitle:(NSString *)drTitle type:(titleViewType)type
 {
     _titleLabel.text = drTitle;
     
     CGRect tFrame = _titleLabel.frame;
     
-    if (type == TITLE_VIEW_TYPE_NORMAL)
+    if (type == titleViewTypeNormal)
     {
         // frame not changed
     }
-    else if (type == TITLE_VIEW_TYPE_LEFT_NIL) 
+    else if (type == titleViewTypeLeftNil) 
     {
         tFrame.size.width += tFrame.origin.x;
         tFrame.origin.x = 0.f;
     }
-    else if (type == TITLE_VIEW_TYPE_RIGHT_NIL) 
+    else if (type == titleViewTypeRightNil) 
     {
         tFrame.size.width += self.view.bounds.size.width - CGRectGetMaxX(tFrame);
     }

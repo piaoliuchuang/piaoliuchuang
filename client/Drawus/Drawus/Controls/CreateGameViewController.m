@@ -47,6 +47,15 @@
 @synthesize textLabel         =_textLabel;
 @synthesize inputView         =_inputView;
 
+- (void)dealloc
+{
+    self.keyboardContainer = nil;
+    self.textLabel         = nil;
+    self.inputView         = nil;
+    
+    [super dealloc];
+}
+
 #pragma mark - View Lifecycle
 
 - (void)loadView
@@ -86,15 +95,6 @@
     cFrame.origin.x = _textLabel.frame.origin.x + _textLabel.frame.size.width - cFrame.size.width / 2;
     cFrame.origin.y = _textLabel.frame.origin.y - cFrame.size.height / 2;
     [self setCloseBtnFrame:cFrame];
-}
-
-- (void)dealloc
-{
-    self.keyboardContainer = nil;
-    self.textLabel         = nil;
-    self.inputView         = nil;
-
-    [super dealloc];
 }
 
 #pragma mark - KMEnrollViewDelegate

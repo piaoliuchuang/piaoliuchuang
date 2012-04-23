@@ -11,7 +11,7 @@
 typedef enum {
     titleViewTypeNormal,
     titleViewTypeLeftNil,
-    titleViewTyperightNil
+    titleViewTypeRightNil
 } titleViewType;
 
 typedef enum {
@@ -22,7 +22,7 @@ typedef enum {
 
 @interface DrNavigationController : KMNavigationController
 
-- (void)setDrTitle:(NSString *)drTitle type:(popViewType)type;
+- (void)setDrTitle:(NSString *)drTitle type:(titleViewType)type;
 - (void)showPopViewByType:(popViewType)type;
 - (void)hidePopViewByType:(popViewType)type;
 

@@ -13,6 +13,7 @@ typedef enum
     errorTypeUnknown = 0,
     errorTypeFailed,
     errorTypeNetwork,
+    errorTypeNoUser,
 } errorType;
 
 @protocol DataFetcherDelegate;
@@ -36,7 +37,7 @@ typedef enum
 
 @optional
 - (void)dataFetched:(DataFetcher *)dataFetcher error:(NSError *)error;
-// - (void)dataFetchFailed:(DataFetcher *)dataFetcher error:(NSError *)error;
+- (void)dataFetchFailed:(DataFetcher *)dataFetcher error:(NSError *)error;
 
 - (void)dataPushed:(DataFetcher *)dataFetcher;
 - (void)dataPushFailed:(DataFetcher *)dataFetcher error:(NSError *)error;

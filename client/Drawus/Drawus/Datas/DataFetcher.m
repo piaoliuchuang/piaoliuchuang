@@ -207,7 +207,7 @@
 	{
 		[self notifyFetched:self error:[NSError errorWithDomain:@"DataFetcher" code:errorTypeFailed userInfo:nil]];
 
-		_fetching = NO;		
+		_fetching = NO;
 	}
 	else if (request == _formRequest)
 	{

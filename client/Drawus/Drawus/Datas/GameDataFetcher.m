@@ -76,18 +76,14 @@ static GameDataFetcher *_sharedFetcher = nil;
     
     if ([message isEqualToString:noUser])
     {
-    	[self notifyFetched:self error:[NSError errorWithDomain:@"DataFetcher" code:errorTypeNoUser userInfo:nil]]
+    	[self notifyFetched:self error:[NSError errorWithDomain:@"DataFetcher" code:errorTypeNoUser userInfo:nil]];
     }
     else if ([message isEqualToString:success])
     {
-    	NSDictionary *data = [root objectAtIndex:@"data"];
+    	NSDictionary *data = [root objectForKey:@"data"];
 
     	NSNumber *score = [data objectForKey:@"score"];
     	NSArray *gameInfo = [data objectForKey:@"gameinfo"];
-
-
-
-    	#warning 逻辑需要改变
     }
 
 	// debug code

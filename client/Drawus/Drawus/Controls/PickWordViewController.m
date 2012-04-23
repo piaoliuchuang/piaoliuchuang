@@ -127,7 +127,7 @@
     _nav.leftView = backBtn;
     _nav.rightView = nil;
     
-    [_nav setDrTitle:@"挑一个吧" type:TITLE_VIEW_TYPE_NORMAL];
+    [_nav setDrTitle:@"挑一个吧" type:titleViewTypeNormal];
     [_nav.kmNavigationBar showShadow:YES];
     
     self.words = [[GameDataFetcher sharedFetcher] randomWords];

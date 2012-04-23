@@ -77,6 +77,19 @@
 @synthesize eraserBtn     =_eraserBtn;
 @synthesize popupView     =_popupView;
 
+- (void)dealloc
+{
+    self.word = nil;
+    self.drawBoard     = nil;
+    self.topToolbar    = nil;
+    self.bottomToolbar = nil;
+    self.brushBtn      = nil;
+    self.eraserBtn     = nil;
+    self.popupView     = nil;
+    
+    [super dealloc];
+}
+
 #pragma mark - private
 
 - (void)leftBtnClicked:(id)sender
@@ -297,22 +310,9 @@
     
     _nav.leftView = backBtn;
     _nav.rightView = nil;
-    [_nav setDrTitle:_word.wordStr type:TITLE_VIEW_TYPE_RIGHT_NIL];
+    [_nav setDrTitle:_word.wordStr type:titleViewTypeRightNil];
     
     [_nav.kmNavigationBar showShadow:YES];
-}
-
-- (void)dealloc
-{
-    self.word = nil;
-    self.drawBoard     = nil;
-    self.topToolbar    = nil;
-    self.bottomToolbar = nil;
-    self.brushBtn      = nil;
-    self.eraserBtn     = nil;
-    self.popupView     = nil;
-    
-    [super dealloc];
 }
 
 #pragma mark - KMPopupButtonViewDelegate

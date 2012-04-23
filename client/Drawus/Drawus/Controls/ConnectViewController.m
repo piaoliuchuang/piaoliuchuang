@@ -37,6 +37,13 @@
 @synthesize drDelegate =_drDelegate;
 @synthesize textLabel  =_textLabel;
 
+- (void)dealloc
+{
+    self.textLabel = nil;
+    
+    [super dealloc];
+}
+
 #pragma mark - public
 
 - (void)checkConnected
@@ -78,13 +85,6 @@
     _textLabel.center = self.view.center;
 
     [self.view addSubview:_textLabel];
-}
-
-- (void)dealloc
-{
-    self.textLabel = nil;
-
-    [super dealloc];
 }
 
 #pragma mark - default

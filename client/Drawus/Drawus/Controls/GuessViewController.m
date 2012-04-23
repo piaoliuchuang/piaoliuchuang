@@ -271,7 +271,7 @@
     
     [self setWordStr:drawing.word.wordStr];
     
-    [_nav setDrTitle:drawing.word.wordStr type:TITLE_VIEW_TYPE_RIGHT_NIL];
+    [_nav setDrTitle:drawing.word.wordStr type:titleViewTypeRightNil];
 
     if (gameLanguage() == game_language_type_english)
     {
