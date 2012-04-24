@@ -64,7 +64,7 @@
 		CB59C6A4153C85CC0054E2FC /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB59C696153C85CC0054E2FC /* SBJsonTokeniser.m */; };
 		CB59C6A5153C85CC0054E2FC /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = CB59C698153C85CC0054E2FC /* SBJsonUTF8Stream.m */; };
 		CB59C6A6153C85CC0054E2FC /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = CB59C69A153C85CC0054E2FC /* SBJsonWriter.m */; };
-		CB73CC3F152CB4AE00F1626A /* RoundRectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB73CC3E152CB4AE00F1626A /* RoundRectButton.m */; };
+		CB8859441546A95B0045C79B /* KMRoundRectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8859431546A95B0045C79B /* KMRoundRectButton.m */; };
 		CB91AA691520C414007E23DB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB91AA681520C414007E23DB /* AVFoundation.framework */; };
 		CB91AA6F1520C61E007E23DB /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB91AA6E1520C61E007E23DB /* AssetsLibrary.framework */; };
 		CB91AA731520C64C007E23DB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB91AA721520C64C007E23DB /* CoreVideo.framework */; };
@@ -241,8 +241,8 @@
 		CB59C698153C85CC0054E2FC /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		CB59C699153C85CC0054E2FC /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		CB59C69A153C85CC0054E2FC /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		CB73CC3D152CB4AE00F1626A /* RoundRectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundRectButton.h; path = Views/RoundRectButton.h; sourceTree = "<group>"; };
-		CB73CC3E152CB4AE00F1626A /* RoundRectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundRectButton.m; path = Views/RoundRectButton.m; sourceTree = "<group>"; };
+		CB8859421546A95B0045C79B /* KMRoundRectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMRoundRectButton.h; sourceTree = "<group>"; };
+		CB8859431546A95B0045C79B /* KMRoundRectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMRoundRectButton.m; sourceTree = "<group>"; };
 		CB91AA681520C414007E23DB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CB91AA6E1520C61E007E23DB /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		CB91AA701520C62D007E23DB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -512,8 +512,6 @@
 				CB3D73D6151F3EE70056F3B1 /* PickLetterView.m */,
 				CB356017151D7A540040AA64 /* RecentPlayerCell.h */,
 				CB356018151D7A540040AA64 /* RecentPlayerCell.m */,
-				CB73CC3D152CB4AE00F1626A /* RoundRectButton.h */,
-				CB73CC3E152CB4AE00F1626A /* RoundRectButton.m */,
 				CB047E71153311F9000F0E4D /* SetupView.h */,
 				CB047E72153311F9000F0E4D /* SetupView.m */,
 			);
@@ -552,6 +550,7 @@
 		CB19A581151C215800D3D5DE /* KMCommon */ = {
 			isa = PBXGroup;
 			children = (
+				CB8859411546A95B0045C79B /* KMRoundRectButton */,
 				CB59C680153C85CC0054E2FC /* SBJSON */,
 				CB388F9F153B3B7400796E5B /* umeng */,
 				CBE3701715257691002BCD07 /* ASIHTTPRequest */,
@@ -687,6 +686,15 @@
 				CB59C69A153C85CC0054E2FC /* SBJsonWriter.m */,
 			);
 			path = SBJSON;
+			sourceTree = "<group>";
+		};
+		CB8859411546A95B0045C79B /* KMRoundRectButton */ = {
+			isa = PBXGroup;
+			children = (
+				CB8859421546A95B0045C79B /* KMRoundRectButton.h */,
+				CB8859431546A95B0045C79B /* KMRoundRectButton.m */,
+			);
+			path = KMRoundRectButton;
 			sourceTree = "<group>";
 		};
 		CB9B5CD2152F21C400AD499A /* Fonts */ = {
@@ -1056,7 +1064,6 @@
 				CB3C98A1152C23CF00D38511 /* KMPopTableViewController.m in Sources */,
 				CB3C98D9152C29C500D38511 /* KMKeyboardContainer.m in Sources */,
 				CB35B584152C5080008FE374 /* KMEnrollView.m in Sources */,
-				CB73CC3F152CB4AE00F1626A /* RoundRectButton.m in Sources */,
 				CB01E0DA152E03B00055457B /* DrSimpleIndicator.m in Sources */,
 				CB047E73153311F9000F0E4D /* SetupView.m in Sources */,
 				CB9AA50F15399929001547AA /* Drawus-URLs.m in Sources */,
@@ -1072,6 +1079,7 @@
 				CB59C6A4153C85CC0054E2FC /* SBJsonTokeniser.m in Sources */,
 				CB59C6A5153C85CC0054E2FC /* SBJsonUTF8Stream.m in Sources */,
 				CB59C6A6153C85CC0054E2FC /* SBJsonWriter.m in Sources */,
+				CB8859441546A95B0045C79B /* KMRoundRectButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

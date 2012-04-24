@@ -8,7 +8,7 @@
 
 #import "ResultViewController.h"
 #import "GameDataFetcher.h"
-#import "RoundRectButton.h"
+#import "KMRoundRectButton.h"
 
 #define CORRECT_TEXT @"恭喜你，答对了！\n 被猜得词为："
 #define PASS_TEXT    @"很遗憾，没有猜中。\n 被猜的词为："
@@ -34,7 +34,7 @@
 
 @property (nonatomic, retain) UILabel *textLabel;
 @property (nonatomic, retain) UILabel *wordLabel;
-@property (nonatomic, retain) RoundRectButton *nextButton;
+@property (nonatomic, retain) KMRoundRectButton *nextButton;
 
 @end
 
@@ -84,7 +84,7 @@
     _wordLabel.font = FONT_ENGLISH(18.f);
     [self.view addSubview:_wordLabel];
 
-    self.nextButton = [[[RoundRectButton alloc] init] autorelease];
+    self.nextButton = [[[KMRoundRectButton alloc] init] autorelease];
     [_nextButton addTarget:self action:@selector(nextButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     _nextButton.titleLabel.font = FONT_CHINESE(13.f);
     _nextButton.frame = NEXT_BUTTON_FRAME;

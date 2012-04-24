@@ -15,7 +15,7 @@
 #import "DrawPopupButton.h"
 #import "DrawColorButton.h"
 #import "DrawPopupButtonView.h"
-#import "RoundRectButton.h"
+#import "KMRoundRectButton.h"
 
 #import "GameDataFetcher.h"
 
@@ -256,7 +256,7 @@
     [self.view bringSubviewToFront:_drawBoard];
     
 
-    RoundRectButton *clearBtn = [[[RoundRectButton alloc] init] autorelease];
+    KMRoundRectButton *clearBtn = [[[KMRoundRectButton alloc] init] autorelease];
     
     CGRect cFrame = CLEAR_BUTTON_FRAME;
     cFrame.origin.x = PADDING;
@@ -270,7 +270,7 @@
     [clearBtn addTarget:self action:@selector(clearBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:clearBtn];
     
-    RoundRectButton *doneBtn = [[[RoundRectButton alloc] init] autorelease];
+    KMRoundRectButton *doneBtn = [[[KMRoundRectButton alloc] init] autorelease];
     
     CGRect dFrame = DONE_BUTTON_FRAME;
     dFrame.origin.x = vFrame.size.width - dFrame.size.width - PADDING;

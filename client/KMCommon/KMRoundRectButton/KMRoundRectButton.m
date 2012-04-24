@@ -7,9 +7,9 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "RoundRectButton.h"
+#import "KMRoundRectButton.h"
 
-@interface RoundRectButton () {
+@interface KMRoundRectButton () {
     
     UIView *_touchView;
     CGFloat _scale;     // 使 button 的实际大小大于可视区域
@@ -19,16 +19,22 @@
 
 @end
 
-@implementation RoundRectButton
+@implementation KMRoundRectButton
 
 @synthesize bgColor=_bgColor;
 @synthesize coverLabel=_coverLabel;
 
-#pragma mark - default
-
-- (id)init
+- (void)dealloc
 {
-    self = [super init];
+    self.coverLabel = nil;
+    
+    [super dealloc];
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
     if (self) {
         
         _scale = 0.8;
@@ -38,29 +44,18 @@
         _coverLabel.alpha = 0.6f;
         _coverLabel.hidden = YES;
         [self addSubview:_coverLabel];
+        
+        CGRect subRect = self.bounds;
+        subRect.size.width *= _scale;
+        subRect.size.height *= _scale;
+        subRect.origin.x = (self.bounds.size.width - subRect.size.width) / 2;
+        subRect.origin.y = (self.bounds.size.height - subRect.size.height) / 2;
+        
+        _coverLabel.frame = subRect;
+        _coverLabel.layer.cornerRadius = subRect.size.width / 8;
     }
+    
     return self;
-}
-
-- (void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-    
-    CGRect subRect = self.bounds;
-    subRect.size.width *= _scale;
-    subRect.size.height *= _scale;
-    subRect.origin.x = (self.bounds.size.width - subRect.size.width) / 2;
-    subRect.origin.y = (self.bounds.size.height - subRect.size.height) / 2;
-    
-    _coverLabel.frame = subRect;
-    _coverLabel.layer.cornerRadius = subRect.size.width / 8;
-}
-
-- (void)dealloc
-{
-    self.coverLabel = nil;
-    
-    [super dealloc];
 }
 
 - (void)drawRect:(CGRect)rect
@@ -76,6 +71,18 @@
     CGFloat radius = subRect.size.width / 8;
     
     drawRoundRect(context, subRect, radius, _bgColor);
+}
+
+- (void)layoutSubviews
+{
+    CGRect subRect = self.bounds;
+    subRect.size.width *= _scale;
+    subRect.size.height *= _scale;
+    subRect.origin.x = (self.bounds.size.width - subRect.size.width) / 2;
+    subRect.origin.y = (self.bounds.size.height - subRect.size.height) / 2;
+    
+    _coverLabel.frame = subRect;
+    _coverLabel.layer.cornerRadius = subRect.size.width / 8;
 }
 
 #pragma mark - UITouch

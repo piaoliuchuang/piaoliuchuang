@@ -12,7 +12,7 @@
 #import "PickWordViewController.h"
 #import "GuessBoardView.h"
 #import "PickLetterView.h"
-#import "RoundRectButton.h"
+#import "KMRoundRectButton.h"
 #import "KMKeyboardContainer.h"
 #import "KMEnrollView.h"
 #import "DrSimpleIndicator.h"
@@ -55,9 +55,9 @@
 @property (nonatomic, retain) UILabel              *inputLabel;
 @property (nonatomic, retain) UITextField          *inputField;
 @property (nonatomic, retain) ResultViewController *resultView;
-@property (nonatomic, retain) RoundRectButton      *replayButton;
-@property (nonatomic, retain) RoundRectButton      *passButton;
-@property (nonatomic, retain) RoundRectButton      *resetButton;
+@property (nonatomic, retain) KMRoundRectButton      *replayButton;
+@property (nonatomic, retain) KMRoundRectButton      *passButton;
+@property (nonatomic, retain) KMRoundRectButton      *resetButton;
 
 @end
 
@@ -200,7 +200,7 @@
     
     [_keyboardContainer addSubview:_inputField];
 
-    self.replayButton = [[[RoundRectButton alloc] init] autorelease];
+    self.replayButton = [[[KMRoundRectButton alloc] init] autorelease];
     [_replayButton addTarget:self action:@selector(replayButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     _replayButton.titleLabel.font = FONT_CHINESE(13.f);
     _replayButton.bgColor = [UIColor colorWithHexString:@"#ca534a"];
@@ -212,7 +212,7 @@
     
     [self.view addSubview:_replayButton];
     
-    self.passButton = [[[RoundRectButton alloc] init] autorelease];
+    self.passButton = [[[KMRoundRectButton alloc] init] autorelease];
     [_passButton addTarget:self action:@selector(passButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     _passButton.titleLabel.font = FONT_CHINESE(13.f);
     _passButton.bgColor = [UIColor colorWithHexString:@"#ca534a"];
@@ -222,7 +222,7 @@
 
     [self.view addSubview:_passButton];
 
-    self.resetButton = [[[RoundRectButton alloc] init] autorelease];
+    self.resetButton = [[[KMRoundRectButton alloc] init] autorelease];
     [_resetButton addTarget:self action:@selector(resetButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     _resetButton.titleLabel.font = FONT_CHINESE(13.f);
     _resetButton.bgColor = [UIColor colorWithHexString:@"#ca534a"];

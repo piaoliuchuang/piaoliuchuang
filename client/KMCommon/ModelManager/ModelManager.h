@@ -10,6 +10,8 @@
 
 @interface ModelManager : NSObject
 
+- (NSManagedObjectContext *)managedObjectContext;
+
 - (NSString *)databaseName;
 - (BOOL)save;
 

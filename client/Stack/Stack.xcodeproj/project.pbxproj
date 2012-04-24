@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB39831A1546CBC60022FAFB /* KMKeyboardContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3983191546CBC60022FAFB /* KMKeyboardContainer.m */; };
+		CB398330154710600022FAFB /* Stack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB39832E154710600022FAFB /* Stack.xcdatamodeld */; };
+		CB398337154710D90022FAFB /* ModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB398336154710D90022FAFB /* ModelManager.m */; };
+		CB39833A154710FF0022FAFB /* StackModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB398339154710FF0022FAFB /* StackModelManager.m */; };
+		CB39835F154712660022FAFB /* TodoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CB39835E154712660022FAFB /* TodoModel.m */; };
+		CB398361154719FC0022FAFB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB398360154719FC0022FAFB /* CoreData.framework */; };
+		CB39836515471C8E0022FAFB /* KMSimpleIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = CB39836415471C8E0022FAFB /* KMSimpleIndicator.m */; };
+		CB8856C7154659080045C79B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8856C6154659080045C79B /* UIKit.framework */; };
+		CB8856C9154659080045C79B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8856C8154659080045C79B /* Foundation.framework */; };
+		CB8856CB154659080045C79B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8856CA154659080045C79B /* CoreGraphics.framework */; };
+		CB8856D1154659080045C79B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB8856CF154659080045C79B /* InfoPlist.strings */; };
+		CB8856D3154659080045C79B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8856D2154659080045C79B /* main.m */; };
+		CB8856D7154659080045C79B /* StackAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8856D6154659080045C79B /* StackAppDelegate.m */; };
+		CB885924154698A70045C79B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB885923154698A70045C79B /* Constants.m */; };
+		CB885927154698C60045C79B /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB885926154698C60045C79B /* StackView.m */; };
+		CB88592A154698D30045C79B /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB885929154698D30045C79B /* StackViewController.m */; };
+		CB88592D1546A6090045C79B /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CB88592C1546A6090045C79B /* Utilities.m */; };
+		CB88593B1546A8AA0045C79B /* KMRoundRectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB88593A1546A8AA0045C79B /* KMRoundRectButton.m */; };
+		CB8859601546B40E0045C79B /* KMDrawRectUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8859501546B40E0045C79B /* KMDrawRectUtilities.m */; };
+		CB8859621546B40E0045C79B /* NSObject+PerformBlockAfterDelay.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8859591546B40E0045C79B /* NSObject+PerformBlockAfterDelay.m */; };
+		CB8859631546B40E0045C79B /* UIColor+UIColorAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB88595C1546B40E0045C79B /* UIColor+UIColorAddtions.m */; };
+		CB8859641546B40E0045C79B /* UILabel+UILabelAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB88595F1546B40E0045C79B /* UILabel+UILabelAdditions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CB3983181546CBC60022FAFB /* KMKeyboardContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMKeyboardContainer.h; sourceTree = "<group>"; };
+		CB3983191546CBC60022FAFB /* KMKeyboardContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMKeyboardContainer.m; sourceTree = "<group>"; };
+		CB39832F154710600022FAFB /* Stack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stack.xcdatamodel; sourceTree = "<group>"; };
+		CB398335154710D90022FAFB /* ModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelManager.h; sourceTree = "<group>"; };
+		CB398336154710D90022FAFB /* ModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelManager.m; sourceTree = "<group>"; };
+		CB398338154710FF0022FAFB /* StackModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackModelManager.h; sourceTree = "<group>"; };
+		CB398339154710FF0022FAFB /* StackModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackModelManager.m; sourceTree = "<group>"; };
+		CB39835D154712660022FAFB /* TodoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoModel.h; sourceTree = "<group>"; };
+		CB39835E154712660022FAFB /* TodoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoModel.m; sourceTree = "<group>"; };
+		CB398360154719FC0022FAFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CB39836315471C8E0022FAFB /* KMSimpleIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMSimpleIndicator.h; sourceTree = "<group>"; };
+		CB39836415471C8E0022FAFB /* KMSimpleIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMSimpleIndicator.m; sourceTree = "<group>"; };
+		CB8856C2154659080045C79B /* Stack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB8856C6154659080045C79B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB8856C8154659080045C79B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB8856CA154659080045C79B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CB8856CE154659080045C79B /* Stack-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Stack-Info.plist"; sourceTree = "<group>"; };
+		CB8856D0154659080045C79B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB8856D2154659080045C79B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB8856D4154659080045C79B /* Stack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stack-Prefix.pch"; sourceTree = "<group>"; };
+		CB8856D5154659080045C79B /* StackAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackAppDelegate.h; sourceTree = "<group>"; };
+		CB8856D6154659080045C79B /* StackAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackAppDelegate.m; sourceTree = "<group>"; };
+		CB885922154698A70045C79B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		CB885923154698A70045C79B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		CB885925154698C60045C79B /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
+		CB885926154698C60045C79B /* StackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackView.m; sourceTree = "<group>"; };
+		CB885928154698D30045C79B /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
+		CB885929154698D30045C79B /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
+		CB88592B1546A6090045C79B /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		CB88592C1546A6090045C79B /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		CB8859391546A8AA0045C79B /* KMRoundRectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMRoundRectButton.h; sourceTree = "<group>"; };
+		CB88593A1546A8AA0045C79B /* KMRoundRectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMRoundRectButton.m; sourceTree = "<group>"; };
+		CB88594F1546B40E0045C79B /* KMDrawRectUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMDrawRectUtilities.h; sourceTree = "<group>"; };
+		CB8859501546B40E0045C79B /* KMDrawRectUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMDrawRectUtilities.m; sourceTree = "<group>"; };
+		CB8859521546B40E0045C79B /* KMFrameUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMFrameUtilities.h; sourceTree = "<group>"; };
+		CB8859531546B40E0045C79B /* KMUtilsHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMUtilsHeader.h; sourceTree = "<group>"; };
+		CB8859581546B40E0045C79B /* NSObject+PerformBlockAfterDelay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformBlockAfterDelay.h"; sourceTree = "<group>"; };
+		CB8859591546B40E0045C79B /* NSObject+PerformBlockAfterDelay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformBlockAfterDelay.m"; sourceTree = "<group>"; };
+		CB88595B1546B40E0045C79B /* UIColor+UIColorAddtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+UIColorAddtions.h"; sourceTree = "<group>"; };
+		CB88595C1546B40E0045C79B /* UIColor+UIColorAddtions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+UIColorAddtions.m"; sourceTree = "<group>"; };
+		CB88595E1546B40E0045C79B /* UILabel+UILabelAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+UILabelAdditions.h"; sourceTree = "<group>"; };
+		CB88595F1546B40E0045C79B /* UILabel+UILabelAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+UILabelAdditions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB8856BF154659080045C79B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB398361154719FC0022FAFB /* CoreData.framework in Frameworks */,
+				CB8856C7154659080045C79B /* UIKit.framework in Frameworks */,
+				CB8856C9154659080045C79B /* Foundation.framework in Frameworks */,
+				CB8856CB154659080045C79B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB3983171546CBC60022FAFB /* KMKeyboardContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CB3983181546CBC60022FAFB /* KMKeyboardContainer.h */,
+				CB3983191546CBC60022FAFB /* KMKeyboardContainer.m */,
+			);
+			name = KMKeyboardContainer;
+			path = ../KMCommon/KMKeyboardContainer;
+			sourceTree = "<group>";
+		};
+		CB39832C154710450022FAFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB39832E154710600022FAFB /* Stack.xcdatamodeld */,
+				CB398338154710FF0022FAFB /* StackModelManager.h */,
+				CB398339154710FF0022FAFB /* StackModelManager.m */,
+				CB39835D154712660022FAFB /* TodoModel.h */,
+				CB39835E154712660022FAFB /* TodoModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB398334154710D90022FAFB /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				CB398335154710D90022FAFB /* ModelManager.h */,
+				CB398336154710D90022FAFB /* ModelManager.m */,
+			);
+			name = ModelManager;
+			path = ../KMCommon/ModelManager;
+			sourceTree = "<group>";
+		};
+		CB39836215471C8E0022FAFB /* KMSimpleIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				CB39836315471C8E0022FAFB /* KMSimpleIndicator.h */,
+				CB39836415471C8E0022FAFB /* KMSimpleIndicator.m */,
+			);
+			name = KMSimpleIndicator;
+			path = ../KMCommon/KMSimpleIndicator;
+			sourceTree = "<group>";
+		};
+		CB8856B7154659070045C79B = {
+			isa = PBXGroup;
+			children = (
+				CB8859361546A8980045C79B /* KMCommon */,
+				CB8856CC154659080045C79B /* Stack */,
+				CB8856C5154659080045C79B /* Frameworks */,
+				CB8856C3154659080045C79B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB8856C3154659080045C79B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8856C2154659080045C79B /* Stack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB8856C5154659080045C79B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB398360154719FC0022FAFB /* CoreData.framework */,
+				CB8856C6154659080045C79B /* UIKit.framework */,
+				CB8856C8154659080045C79B /* Foundation.framework */,
+				CB8856CA154659080045C79B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB8856CC154659080045C79B /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				CB39832C154710450022FAFB /* Models */,
+				CB88591F154698600045C79B /* Controls */,
+				CB885920154698600045C79B /* Views */,
+				CB8856D5154659080045C79B /* StackAppDelegate.h */,
+				CB8856D6154659080045C79B /* StackAppDelegate.m */,
+				CB8856CD154659080045C79B /* Supporting Files */,
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		CB8856CD154659080045C79B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB88592B1546A6090045C79B /* Utilities.h */,
+				CB88592C1546A6090045C79B /* Utilities.m */,
+				CB885922154698A70045C79B /* Constants.h */,
+				CB885923154698A70045C79B /* Constants.m */,
+				CB8856CE154659080045C79B /* Stack-Info.plist */,
+				CB8856CF154659080045C79B /* InfoPlist.strings */,
+				CB8856D2154659080045C79B /* main.m */,
+				CB8856D4154659080045C79B /* Stack-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB88591F154698600045C79B /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				CB885928154698D30045C79B /* StackViewController.h */,
+				CB885929154698D30045C79B /* StackViewController.m */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		CB885920154698600045C79B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB885925154698C60045C79B /* StackView.h */,
+				CB885926154698C60045C79B /* StackView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CB8859361546A8980045C79B /* KMCommon */ = {
+			isa = PBXGroup;
+			children = (
+				CB39836215471C8E0022FAFB /* KMSimpleIndicator */,
+				CB398334154710D90022FAFB /* ModelManager */,
+				CB3983171546CBC60022FAFB /* KMKeyboardContainer */,
+				CB88594D1546B40E0045C79B /* KMUtilities */,
+				CB8859381546A8AA0045C79B /* KMRoundRectButton */,
+			);
+			name = KMCommon;
+			sourceTree = "<group>";
+		};
+		CB8859381546A8AA0045C79B /* KMRoundRectButton */ = {
+			isa = PBXGroup;
+			children = (
+				CB8859391546A8AA0045C79B /* KMRoundRectButton.h */,
+				CB88593A1546A8AA0045C79B /* KMRoundRectButton.m */,
+			);
+			name = KMRoundRectButton;
+			path = ../KMCommon/KMRoundRectButton;
+			sourceTree = "<group>";
+		};
+		CB88594D1546B40E0045C79B /* KMUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB88594E1546B40E0045C79B /* KMDrawRectUtilities */,
+				CB8859511546B40E0045C79B /* KMFrameUtilities */,
+				CB8859531546B40E0045C79B /* KMUtilsHeader.h */,
+				CB8859571546B40E0045C79B /* NSObject */,
+				CB88595A1546B40E0045C79B /* UIColorAdditions */,
+				CB88595D1546B40E0045C79B /* UILabelAdditions */,
+			);
+			name = KMUtilities;
+			path = ../KMCommon/KMUtilities;
+			sourceTree = "<group>";
+		};
+		CB88594E1546B40E0045C79B /* KMDrawRectUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB88594F1546B40E0045C79B /* KMDrawRectUtilities.h */,
+				CB8859501546B40E0045C79B /* KMDrawRectUtilities.m */,
+			);
+			path = KMDrawRectUtilities;
+			sourceTree = "<group>";
+		};
+		CB8859511546B40E0045C79B /* KMFrameUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				CB8859521546B40E0045C79B /* KMFrameUtilities.h */,
+			);
+			path = KMFrameUtilities;
+			sourceTree = "<group>";
+		};
+		CB8859571546B40E0045C79B /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				CB8859581546B40E0045C79B /* NSObject+PerformBlockAfterDelay.h */,
+				CB8859591546B40E0045C79B /* NSObject+PerformBlockAfterDelay.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		CB88595A1546B40E0045C79B /* UIColorAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				CB88595B1546B40E0045C79B /* UIColor+UIColorAddtions.h */,
+				CB88595C1546B40E0045C79B /* UIColor+UIColorAddtions.m */,
+			);
+			path = UIColorAdditions;
+			sourceTree = "<group>";
+		};
+		CB88595D1546B40E0045C79B /* UILabelAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				CB88595E1546B40E0045C79B /* UILabel+UILabelAdditions.h */,
+				CB88595F1546B40E0045C79B /* UILabel+UILabelAdditions.m */,
+			);
+			path = UILabelAdditions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB8856C1154659080045C79B /* Stack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB8856E0154659080045C79B /* Build configuration list for PBXNativeTarget "Stack" */;
+			buildPhases = (
+				CB8856BE154659080045C79B /* Sources */,
+				CB8856BF154659080045C79B /* Frameworks */,
+				CB8856C0154659080045C79B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stack;
+			productName = Stack;
+			productReference = CB8856C2154659080045C79B /* Stack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB8856B9154659070045C79B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Stack;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = 99fang;
+			};
+			buildConfigurationList = CB8856BC154659070045C79B /* Build configuration list for PBXProject "Stack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CB8856B7154659070045C79B;
+			productRefGroup = CB8856C3154659080045C79B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB8856C1154659080045C79B /* Stack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB8856C0154659080045C79B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8856D1154659080045C79B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB8856BE154659080045C79B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB8856D3154659080045C79B /* main.m in Sources */,
+				CB8856D7154659080045C79B /* StackAppDelegate.m in Sources */,
+				CB885924154698A70045C79B /* Constants.m in Sources */,
+				CB885927154698C60045C79B /* StackView.m in Sources */,
+				CB88592A154698D30045C79B /* StackViewController.m in Sources */,
+				CB88592D1546A6090045C79B /* Utilities.m in Sources */,
+				CB88593B1546A8AA0045C79B /* KMRoundRectButton.m in Sources */,
+				CB8859601546B40E0045C79B /* KMDrawRectUtilities.m in Sources */,
+				CB8859621546B40E0045C79B /* NSObject+PerformBlockAfterDelay.m in Sources */,
+				CB8859631546B40E0045C79B /* UIColor+UIColorAddtions.m in Sources */,
+				CB8859641546B40E0045C79B /* UILabel+UILabelAdditions.m in Sources */,
+				CB39831A1546CBC60022FAFB /* KMKeyboardContainer.m in Sources */,
+				CB398330154710600022FAFB /* Stack.xcdatamodeld in Sources */,
+				CB398337154710D90022FAFB /* ModelManager.m in Sources */,
+				CB39833A154710FF0022FAFB /* StackModelManager.m in Sources */,
+				CB39835F154712660022FAFB /* TodoModel.m in Sources */,
+				CB39836515471C8E0022FAFB /* KMSimpleIndicator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CB8856CF154659080045C79B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB8856D0154659080045C79B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB8856DE154659080045C79B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CB8856DF154659080045C79B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB8856E1154659080045C79B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Stack/Stack-Prefix.pch";
+				INFOPLIST_FILE = "Stack/Stack-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../KMCommon/umeng\"",
+					"\"$(SRCROOT)/../KMCommon/待整理/GoogleAdMobAdsSDKiOS-5.0.5\"",
+					"\"$(SRCROOT)/../KMCommon/待整理/Statistics/ga\"",
+					"\"$(SRCROOT)/../KMCommon/待整理/Statistics/umeng\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CB8856E2154659080045C79B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Stack/Stack-Prefix.pch";
+				INFOPLIST_FILE = "Stack/Stack-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../KMCommon/umeng\"",
+					"\"$(SRCROOT)/../KMCommon/待整理/GoogleAdMobAdsSDKiOS-5.0.5\"",
+					"\"$(SRCROOT)/../KMCommon/待整理/Statistics/ga\"",
+					"\"$(SRCROOT)/../KMCommon/待整理/Statistics/umeng\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB8856BC154659070045C79B /* Build configuration list for PBXProject "Stack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8856DE154659080045C79B /* Debug */,
+				CB8856DF154659080045C79B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB8856E0154659080045C79B /* Build configuration list for PBXNativeTarget "Stack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB8856E1154659080045C79B /* Debug */,
+				CB8856E2154659080045C79B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CB39832E154710600022FAFB /* Stack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CB39832F154710600022FAFB /* Stack.xcdatamodel */,
+			);
+			currentVersion = CB39832F154710600022FAFB /* Stack.xcdatamodel */;
+			path = Stack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CB8856B9154659070045C79B /* Project object */;
+}

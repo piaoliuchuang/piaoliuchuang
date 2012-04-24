@@ -10,7 +10,7 @@
 #import "GameModel.h"
 #import "PlayerModel.h"
 #import "GameStatView.h"
-#import "RoundRectButton.h"
+#import "KMRoundRectButton.h"
 
 #define CELL_PADDING 5.f
 #define PLAY_BUTTON_FRAME CGRectMake(0, 0, 80, 34)
@@ -25,12 +25,12 @@
 	PLAYER_STATUS _playerStatus;
 }
 
-@property (nonatomic, retain) RoundRectButton *playBtn;
-@property (nonatomic, retain) RoundRectButton *statBtn; 	// stat 统计；
+@property (nonatomic, retain) KMRoundRectButton *playBtn;
+@property (nonatomic, retain) KMRoundRectButton *statBtn; 	// stat 统计；
 @property (nonatomic, retain) UILabel        *currentOwnerLabel;
 @property (nonatomic, retain) UILabel        *statusLabel;
 @property (nonatomic, retain) GameStatView   *statView;
-@property (nonatomic, retain) RoundRectButton *deleteBtn;
+@property (nonatomic, retain) KMRoundRectButton *deleteBtn;
 
 @end
 
@@ -48,6 +48,69 @@
 @synthesize statusLabel       =_statusLabel;
 @synthesize statView          =_statView;
 @synthesize deleteBtn         =_deleteBtn;
+
+- (void)dealloc
+{
+	self.playBtn           = nil;
+	self.statBtn           = nil;
+	self.currentOwnerLabel = nil;
+	self.statusLabel       = nil;
+	self.statView          = nil;
+	self.deleteBtn         = nil;
+    
+	[super dealloc];
+}
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+		self.playBtn = [[[KMRoundRectButton alloc] init] autorelease];
+		[_playBtn setBackgroundColor:[UIColor clearColor]];
+        _playBtn.bgColor = [UIColor colorWithHexString:@"#9ff309"]; // @"#ca534a"]; // 
+        _playBtn.titleLabel.font = FONT_CHINESE(13.f);
+		[_playBtn addTarget:self action:@selector(playBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+		[_playBtn setTitle:@"开始游戏" forState:UIControlStateNormal];
+		[_playBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[self.contentView addSubview:_playBtn];
+        
+		/*  
+         statBtn 在lite1.0中不表示统计信息，只表示详情 
+         暂时弃用statBtn，点击cell获取详情
+         */
+        
+        // self.statBtn = [[[RoundRectButton alloc] init] autorelease];
+        // [_statBtn setBackgroundColor:[UIColor blueColor]];
+        // [_statBtn addTarget:self action:@selector(statBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        // [_statBtn setTitle:@"游戏信息" forState:UIControlStateNormal];
+        // [_playBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        // [self.contentView addSubview:_statBtn];
+        
+        self.currentOwnerLabel = [[[UILabel alloc] init] autorelease];
+        _currentOwnerLabel.backgroundColor = [UIColor clearColor];
+        _currentOwnerLabel.font = FONT_ENGLISH(14.f);
+        [self.contentView addSubview:_currentOwnerLabel];
+        
+        self.statusLabel = [[[UILabel alloc] init] autorelease];
+        _statusLabel.backgroundColor = [UIColor clearColor];
+        _statusLabel.font = FONT_CHINESE(STATUS_LABEL_FONT_SIZE);
+        [self.contentView addSubview:_statusLabel];
+        
+        self.statView = [[[GameStatView alloc] init] autorelease];
+        [self.contentView addSubview:_statView];
+        
+		self.deleteBtn = [[[KMRoundRectButton alloc] init] autorelease];
+		[_deleteBtn setBackgroundColor:[UIColor clearColor]];
+        _deleteBtn.bgColor = [UIColor colorWithHexString:@"#ff3e37"];
+		_deleteBtn.titleLabel.font = FONT_CHINESE(13.f);
+		[_deleteBtn addTarget:self action:@selector(deleteBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+		[_deleteBtn setTitle:@"离开游戏" forState:UIControlStateNormal];
+		[_deleteBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		_deleteBtn.frame = DELETE_BUTTON_FRAME;
+		[_statView addSubview:_deleteBtn];
+    }
+    return self;
+}
 
 #pragma mark - private
 
@@ -176,71 +239,6 @@
     aFrame2 = _deleteBtn.frame;
     aFrame2.origin.x = _playBtn.frame.origin.x;
     _deleteBtn.frame = aFrame2;
-}
-
-#pragma mark - default
-
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-		self.playBtn = [[[RoundRectButton alloc] init] autorelease];
-		[_playBtn setBackgroundColor:[UIColor clearColor]];
-        _playBtn.bgColor = [UIColor colorWithHexString:@"#9ff309"]; // @"#ca534a"]; // 
-        _playBtn.titleLabel.font = FONT_CHINESE(13.f);
-		[_playBtn addTarget:self action:@selector(playBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-		[_playBtn setTitle:@"开始游戏" forState:UIControlStateNormal];
-		[_playBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-		[self.contentView addSubview:_playBtn];
-
-		/*  
-			statBtn 在lite1.0中不表示统计信息，只表示详情 
-			暂时弃用statBtn，点击cell获取详情
-		*/
-
-        // self.statBtn = [[[RoundRectButton alloc] init] autorelease];
-        // [_statBtn setBackgroundColor:[UIColor blueColor]];
-        // [_statBtn addTarget:self action:@selector(statBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-        // [_statBtn setTitle:@"游戏信息" forState:UIControlStateNormal];
-        // [_playBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        // [self.contentView addSubview:_statBtn];
-
-        self.currentOwnerLabel = [[[UILabel alloc] init] autorelease];
-        _currentOwnerLabel.backgroundColor = [UIColor clearColor];
-        _currentOwnerLabel.font = FONT_ENGLISH(14.f);
-        [self.contentView addSubview:_currentOwnerLabel];
-
-        self.statusLabel = [[[UILabel alloc] init] autorelease];
-        _statusLabel.backgroundColor = [UIColor clearColor];
-        _statusLabel.font = FONT_CHINESE(STATUS_LABEL_FONT_SIZE);
-        [self.contentView addSubview:_statusLabel];
-
-        self.statView = [[[GameStatView alloc] init] autorelease];
-        [self.contentView addSubview:_statView];
-
-		self.deleteBtn = [[[RoundRectButton alloc] init] autorelease];
-		[_deleteBtn setBackgroundColor:[UIColor clearColor]];
-        _deleteBtn.bgColor = [UIColor colorWithHexString:@"#ff3e37"];
-		_deleteBtn.titleLabel.font = FONT_CHINESE(13.f);
-		[_deleteBtn addTarget:self action:@selector(deleteBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-		[_deleteBtn setTitle:@"离开游戏" forState:UIControlStateNormal];
-		[_deleteBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-		_deleteBtn.frame = DELETE_BUTTON_FRAME;
-		[_statView addSubview:_deleteBtn];
-    }
-    return self;
-}
-
-- (void)dealloc
-{
-	self.playBtn           = nil;
-	self.statBtn           = nil;
-	self.currentOwnerLabel = nil;
-	self.statusLabel       = nil;
-	self.statView          = nil;
-	self.deleteBtn         = nil;
-
-	[super dealloc];
 }
 
 //- (void)setSelected:(BOOL)selected animated:(BOOL)animated

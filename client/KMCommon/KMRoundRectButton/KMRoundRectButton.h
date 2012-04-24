@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RoundRectButton : UIButton
+@interface KMRoundRectButton : UIButton
 
 @property (nonatomic, retain) UIColor *bgColor;
 
